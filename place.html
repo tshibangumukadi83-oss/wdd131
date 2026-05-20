@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DR Congo Page</title>
+
+    <meta name="description" content="Country page about DR Congo" />
+    <meta name="author" content="Mukadi Tshibangu" />
+
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" />
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Democratic Republic of the Congo</h1>
+</header>
+
+<main>
+
+    <picture>
+        <source srcset="images/congo-large.webp" media="(min-width: 768px)">
+        <img src="images/congo-small.webp" alt="DR Congo Landscape">
+    </picture>
+
+    <section class="data">
+        <h2>Data</h2>
+
+        <p><strong>Area:</strong> 2,344,858 sq km</p>
+        <p><strong>Population:</strong> 111 million</p>
+        <p><strong>Capital:</strong> Kinshasa</p>
+        <p><strong>Languages:</strong> French, Swahili</p>
+        <p><strong>Currency:</strong> Congolese Franc</p>
+        <p><strong>Time Zone:</strong> UTC+2</p>
+    </section>
+
+    <section class="weather">
+        <h2>Weather</h2>
+
+        <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+
+        <p><strong>Temperature:</strong> <span id="temp">8</span> °C</p>
+        <p><strong>Conditions:</strong> Cloudy</p>
+        <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        © <span id="currentyear"></span> 🌍 Mukadi Tshibangu 🌍 DR Congo
+    </p>
+
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
