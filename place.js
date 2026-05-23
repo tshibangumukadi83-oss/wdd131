@@ -1,6 +1,8 @@
-const temperature = 8;
-const windSpeed = 10;
+// Valeurs statiques pour l'instant
+const temperature = 8; // °C
+const windSpeed = 10; // km/h
 
+// Fonction pour calculer le wind chill
 function calculateWindChill(temp, speed) {
     return (
         13.12 +
@@ -10,16 +12,16 @@ function calculateWindChill(temp, speed) {
     ).toFixed(1);
 }
 
-const windChill = document.querySelector("#windchill");
-
+// Mise à jour du wind chill
+const windChillElement = document.querySelector("#windchill");
 if (temperature <= 10 && windSpeed > 4.8) {
-    windChill.textContent = `${calculateWindChill(temperature, windSpeed)} °C`;
+    windChillElement.textContent = `${calculateWindChill(temperature, windSpeed)} °C`;
 } else {
-    windChill.textContent = "N/A";
+    windChillElement.textContent = "N/A";
 }
 
-document.querySelector("#currentyear").textContent =
-    new Date().getFullYear();
+// Mise à jour de l'année actuelle
+document.querySelector("#currentyear").textContent = new Date().getFullYear();
 
-document.querySelector("#lastModified").textContent =
-    `Last Modification: ${document.lastModified}`;
+// Mise à jour de la date de dernière modification
+document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
