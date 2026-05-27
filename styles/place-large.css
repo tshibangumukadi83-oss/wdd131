@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    picture {
+        grid-column: span 2;
+    }
+
+    .weather img {
+        display: none;
+    }
+}
