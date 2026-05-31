@@ -37,14 +37,14 @@ header h1 {
 
 /* Navigation */
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
 }
 
-.navigation:not(.open) {
+.navigation {
     display: none;
 }
 
