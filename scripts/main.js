@@ -1,89 +1,110 @@
-const button = document.querySelector("#messageButton");
+// Button interaction
 
+const button = document.querySelector("#messageButton");
 const message = document.querySelector("#message");
 
 
-if(button){
+if (button && message) {
 
-button.addEventListener("click", function(){
+    button.addEventListener("click", () => {
 
-message.textContent =
-`Welcome! Explore the beauty of the Democratic Republic of the Congo.`;
+        message.textContent =
+        `Welcome! Explore the beauty of the Democratic Republic of the Congo.`;
 
-});
+    });
 
 }
 
 
+
+// Array + Objects
 
 const places = [
 
-{
-name:"Virunga National Park",
-location:"Eastern Congo"
-},
+    {
+        name: "Virunga National Park",
+        location: "Eastern Congo"
+    },
 
-{
-name:"Kinshasa",
-location:"Capital City"
-},
+    {
+        name: "Kinshasa",
+        location: "Capital City"
+    },
 
-{
-name:"Lake Kivu",
-location:"Great Lakes Region"
-}
+    {
+        name: "Lake Kivu",
+        location: "Great Lakes Region"
+    }
 
 ];
 
 
 
-const list = document.querySelector("#placesList");
+// Function
+
+function displayPlaces() {
+
+    const list = document.querySelector("#placesList");
 
 
-if(list){
+    if (list) {
+
+        list.innerHTML = places.map(place =>
+
+        `
+        <li>
+        <strong>${place.name}</strong>
+        - ${place.location}
+        </li>
+        `
+
+        ).join("");
+
+    }
+
+}
 
 
-const output = places.map(place =>
 
-`<li>${place.name} - ${place.location}</li>`
+// Local Storage
 
-);
+function saveVisits(){
+
+    let visits = localStorage.getItem("visits");
 
 
-list.innerHTML = output.join("");
+    if (!visits){
+
+        visits = 0;
+
+    }
+
+
+    visits++;
+
+
+    localStorage.setItem("visits", visits);
+
+
+
+    const counter = document.querySelector("#counter");
+
+
+    if(counter){
+
+        counter.textContent =
+        `You visited this site ${visits} times.`;
+
+    }
 
 }
 
 
 
-let visits = localStorage.getItem("visits");
 
+// Form event
 
-if(!visits){
-
-visits = 0;
-
-}
-
-
-visits++;
-
-
-localStorage.setItem("visits", visits);
-
-
-
-const counter = document.querySelector("#counter");
-
-
-if(counter){
-
-counter.textContent =
-`You visited this site ${visits} times.`;
-
-}
-
-
+function handleForm(){
 
 
 const form = document.querySelector("#contactForm");
@@ -92,7 +113,7 @@ const form = document.querySelector("#contactForm");
 if(form){
 
 
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", (event)=>{
 
 
 event.preventDefault();
@@ -107,20 +128,43 @@ document.querySelector("#formMessage");
 
 
 
-if(name){
+if(name.trim() !== ""){
+
+
+localStorage.setItem("visitorName", name);
+
+
 
 formMessage.textContent =
 `Thank you ${name}, your message was received.`;
 
+
 }
+
 else{
+
 
 formMessage.textContent =
 "Please enter your name.";
+
 
 }
 
 
 });
 
+
 }
+
+
+}
+
+
+
+// Run functions
+
+displayPlaces();
+
+saveVisits();
+
+handleForm();
