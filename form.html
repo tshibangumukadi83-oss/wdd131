@@ -1,84 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review Form</title>
 
-    <meta name="description" content="Submit a product review including ratings, installation date, useful features, and customer feedback.">
+<meta charset="UTF-8">
 
-    <meta name="author" content="Mukadi Tshibangu">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/form.js" defer></script>
+<title>Contact - Discover DR Congo</title>
+
+<meta name="description" content="Contact page for Discover DR Congo website.">
+
+<meta name="author" content="Mukadi Tshibangu">
+
+
+<link rel="stylesheet" href="styles/style.css">
+
+<script src="scripts/main.js" defer></script>
+
 </head>
+
+
 <body>
 
+
 <header>
-    <h1>Product Review Form</h1>
+
+<h1>Contact Discover DR Congo</h1>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="places.html">Places</a>
+
+<a href="culture.html">Culture</a>
+
+<a href="form.html">Contact</a>
+
+</nav>
+
+
 </header>
 
+
+
+
 <main>
-    <form method="get" action="review.html">
 
-        <label for="productName">Product Name *</label>
-        <select id="productName" name="productName" required>
-            <option value="" disabled selected>Select a Product ...</option>
-        </select>
 
-        <fieldset>
-            <legend>Overall Rating *</legend>
+<h2>Send us a message</h2>
 
-            <input type="radio" id="star1" name="rating" value="1" required>
-            <label for="star1">☆</label>
 
-            <input type="radio" id="star2" name="rating" value="2" required>
-            <label for="star2">☆☆</label>
 
-            <input type="radio" id="star3" name="rating" value="3" required>
-            <label for="star3">☆☆☆</label>
+<form id="contactForm">
 
-            <input type="radio" id="star4" name="rating" value="4" required>
-            <label for="star4">☆☆☆☆</label>
 
-            <input type="radio" id="star5" name="rating" value="5" required>
-            <label for="star5">☆☆☆☆☆</label>
-        </fieldset>
+<label for="name">
+Name
+</label>
 
-        <label for="installDate">Date of Installation *</label>
-        <input type="date" id="installDate" name="installDate" required>
+<input 
+type="text"
+id="name"
+name="name"
+required>
 
-        <fieldset>
-            <legend>Useful Features (Check all that apply)</legend>
 
-            <input type="checkbox" id="durability" name="features" value="Durability">
-            <label for="durability">Durability</label>
 
-            <input type="checkbox" id="ease" name="features" value="Ease of Use">
-            <label for="ease">Ease of Use</label>
+<label for="email">
+Email
+</label>
 
-            <input type="checkbox" id="performance" name="features" value="Performance">
-            <label for="performance">Performance</label>
+<input 
+type="email"
+id="email"
+name="email"
+required>
 
-            <input type="checkbox" id="design" name="features" value="Design">
-            <label for="design">Design</label>
-        </fieldset>
 
-        <label for="review">Written Review</label>
-        <textarea id="review" name="review" rows="5"></textarea>
 
-        <label for="username">User Name</label>
-        <input type="text" id="username" name="username">
 
-        <input type="submit" value="Submit Review">
+<label for="messageInput">
+Message
+</label>
 
-    </form>
+
+<textarea
+id="messageInput"
+name="message"
+rows="5"
+required>
+</textarea>
+
+
+
+
+<button type="submit">
+Send
+</button>
+
+
+
+<p id="formMessage"></p>
+
+
+
+</form>
+
+
 </main>
 
+
+
+
+
 <footer>
-    <p>&copy; <span id="year"></span> | Mukadi Tshibangu | DR Congo</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+
+
+<p>
+
+© <span id="currentyear"></span>
+Mukadi Tshibangu | DR Congo
+
+</p>
+
+
+<a href="references.html">
+References
+</a>
+
+
+<p id="lastModified"></p>
+
+
 </footer>
 
+
+
 </body>
+
 </html>
