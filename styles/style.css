@@ -1,0 +1,65 @@
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header / Title */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+/* Container */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* List */
+ul {
+  list-style: none;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Links */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer (si tu en as un) */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 14px;
+  color: #777;
+}
